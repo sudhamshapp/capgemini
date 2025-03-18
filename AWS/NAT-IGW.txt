@@ -1,0 +1,22 @@
+Sure! Here are the key differences between a **Network Address Translation (NAT) Gateway** and an **Internet Gateway (IGW)**:
+
+1. **Purpose**:
+   - **NAT Gateway**: Allows instances in a private subnet to connect to the internet or other AWS services, but prevents the internet from initiating a connection with those instances[1](https://www.learnaws.org/2022/06/30/internet-vs-nat-gateway/).
+   - **Internet Gateway (IGW)**: Enables communication between instances in a VPC and the internet. It supports both inbound and outbound traffic for instances with public IP addresses[2](https://cloudviz.io/blog/aws-internet-gateway-vs-nat-gateway).
+
+2. **Traffic Direction**:
+   - **NAT Gateway**: Only supports outbound traffic from private instances to the internet[2](https://cloudviz.io/blog/aws-internet-gateway-vs-nat-gateway).
+   - **Internet Gateway (IGW)**: Supports both inbound and outbound traffic for instances with public IPs[1](https://www.learnaws.org/2022/06/30/internet-vs-nat-gateway/).
+
+3. **Usage**:
+   - **NAT Gateway**: Used for instances in private subnets that need to access the internet for updates or other services[2](https://cloudviz.io/blog/aws-internet-gateway-vs-nat-gateway).
+   - **Internet Gateway (IGW)**: Used for instances in public subnets that need to be accessible from the internet[1](https://www.learnaws.org/2022/06/30/internet-vs-nat-gateway/).
+
+4. **Configuration**:
+   - **NAT Gateway**: Requires an Elastic IP address and must be placed in a public subnet[2](https://cloudviz.io/blog/aws-internet-gateway-vs-nat-gateway).
+   - **Internet Gateway (IGW)**: Needs to be attached to the VPC and requires route table configuration to direct traffic[1](https://www.learnaws.org/2022/06/30/internet-vs-nat-gateway/).
+
+5. **Security**:
+   - **NAT Gateway**: Provides an additional layer of security by preventing unsolicited inbound connections[2](https://cloudviz.io/blog/aws-internet-gateway-vs-nat-gateway).
+   - **Internet Gateway (IGW)**: Allows inbound connections, so security groups and network ACLs are crucial for controlling access[1](https://www.learnaws.org/2022/06/30/internet-vs-nat-gateway/).
+
