@@ -1,4 +1,4 @@
-terraform console
+terraform console then give it like <resource-type.resource-name>- this is like python3 on the cli
 resource type and resource name
 Your infrastructure matches the configuration
 desired state is our configuration file and existing state is statefile
@@ -216,7 +216,21 @@ local variables -
 
 secure secrets in terraform code - secrets could be username/password/access token, we shouldn't store the secrets in the plain text, we can mark the values to senstive in the variables and output block, we can use the environment variable to set the secret like this - export TF_VAR_nameofthevariablethatwewannagive=sensitivevalue, we can use the hashicorp vault as well
 
-variable colection and structure types - 
+variable colection and structure types - string, number, bool, list, map(key,value)
+
+string - "sudhamsh"
+
+number - 18
+
+bool - true/false
+
+list - ["us-east-1a", "us-east-1b"] - these are sequence of values
+
+map - {name = "sudhamsh", age = 28} - helps store key/value pairs
+
+data block - query or fetch data from the existing resorces where we can use it in our terraform configuration
+
+terraform built-in functions - https://developer.hashicorp.com/terraform/language/functions this has numeric, string, collection, encoding, filesystem, date and time, hash and crypto, ip network and type  conversion functions
 
 
 
