@@ -232,7 +232,15 @@ data block - query or fetch data from the existing resorces where we can use it 
 
 terraform built-in functions - https://developer.hashicorp.com/terraform/language/functions this has numeric, string, collection, encoding, filesystem, date and time, hash and crypto, ip network and type  conversion functions
 
+terraform graph - visual representation of a configuration or execution plan, the command emits the stuff what was deployed into aws, we can check it visually on this site - http://webgraphviz.com/
 
 
+terraform resource lifecycles - the order in which terraform creates and destroy the resources
+i) create before destroy - the default behaviour in terraform is destroy the resource then create one
+ii)use prevent destroy
 
 
+terraform -install-autocomplete
+
+
+terraform aws provider - multi region and alias - proviosions same infrastructure in the different regions
