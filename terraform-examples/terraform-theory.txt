@@ -214,6 +214,11 @@ Your organization has multiple engineers that have permission to manage Terrafor
 local variables - 
 
 
+secure secrets in terraform code - secrets could be username/password/access token, we shouldn't store the secrets in the plain text, we can mark the values to senstive in the variables and output block, we can use the environment variable to set the secret like this - export TF_VAR_nameofthevariablethatwewannagive=sensitivevalue, we can use the hashicorp vault as well
+
+variable colection and structure types - 
+
+
 
 
 
